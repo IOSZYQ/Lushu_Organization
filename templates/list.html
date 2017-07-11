@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>定制游企业联盟</title>
+  <link rel="Shortcut Icon" href="/static/images/favorite.ico" type="image/x-icon" />
+  <link rel="Bookmark" href="/static/images/favorite.ico" type="image/x-icon" />
+  <link rel="icon" href="/static/images/favorite.ico" type="image/x-icon" />
+  <link href="/static/css/layout.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/font.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/nav.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/content.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/responsive.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div id="navBarWrap">
+    <div class="container">
+      <div class="navBar">
+        <a href="index.html" class="logo"><img src="/static/images/logo.png"/></a>
+        <div class="nav">
+          <a href="{% url "index" %}">首 页</a>
+          <a href="{% url "calendarInfo.list" %}" class="active">定制游机构名录</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container">
+    <div class="page">
+      <div class="orgList">
+
+      {% for item in sourceData %}
+        <div class="row">
+        {% for data in item %}
+            <div class="orgBoxWrap">
+            <a href="{% url "calendarInfo.detail" data.id %}" class="orgBox">
+              <div class="header"><h2>{{ data.name }}</h2></div>
+              <div class="content">
+                产品/服务类型: {{ data.product }}<br/>
+                服务客户类型: {{ data.customer }}<br/><br/>
+                所在地区: {{ data.address }}
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+        </div>
+      {% endfor %}
+
+        <div class="pageNumber clear">
+          {% if prevStart != None %}
+              <span onclick="reloadPage({'start':{{ prevStart }}})" class="btnJump disable"><i class="icon-chevron-thin-left"></i></span>
+          {% endif %}
+          <input id="currentPage" type="text" class="currentPage" value="{{ start }}"> / {{ page }}
+          <span onclick="reloadPage({'start': document.getElementById('currentPage').value})" class="btnGo">GO</span>
+          {% if nextStart != None %}
+            <span onclick="reloadPage({'start':{{ nextStart }}})" class="btnJump"><i class="icon-chevron-thin-right"></i></span>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="footerWrap">
+    <div class="container">
+
+      <div class="col50">
+        <div class="qrCode">
+          <img src="/static/images/qrCode.png"/>
+          <p>扫一扫 申请加入名录</p>
+        </div>
+
+      </div>
+      <div class="col50">
+        <div class="date"><img src="/static/images/date.png"/> </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+    function reloadPage(params) {
+
+{#        console.log(document.getElementById("currentPage").value);#}
+
+        var reloadUrl = "{% url "calendarInfo.list" %}"
+        var queryParam = ""
+        if ("start" in params) {
+            if (queryParam) {
+                queryParam += "&";
+            }
+            queryParam += "start=" + params["start"];
+        }
+
+        if (queryParam) {
+            reloadUrl += "?" + queryParam
+        }
+
+        window.location.href = reloadUrl;
+    }
+</script>
+
+
+</body>
+
+
+</html>

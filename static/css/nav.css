@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#navBarWrap{
+height: 50px;
+padding: 40px 0 30px 0;
+background: #0d0f18;
+color: #fff;
+font-size: 20px;
+}
+
+.navBar{
+height: 50px;
+}
+
+.navBar .logo{
+float: left;
+height: 100%;
+}
+.navBar .logo img{
+height: 100%;
+}
+
+.navBar .nav{
+float: left;
+margin-left: 55px;
+}
+
+.navBar .nav a{
+margin: 0 35px;
+line-height: 40px;
+display: inline-block;
+}
+
+.navBar .nav a:hover{
+color: #a38658;
+}
+
+.navBar .nav a.active{
+color: #a38658;
+font-weight: bold;
+border-bottom: 1px #a38658 solid;
+}
+
+@media (max-width: 641px) {
+
+#navBarWrap{
+height: 30px;
+padding: 10px 0 10px 0;
+font-size: 14px;
+}
+
+.navBar{
+height: 30px;
+}
+.navBar .nav{
+float: right;
+margin-left: 0;
+}
+
+.navBar .nav a{
+margin: 0 0 0 5px;
+line-height: 24px;
+}
+
+}

@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body{
+margin:0;
+padding:0;
+height:100%;
+width:100%;
+}
+
+body{
+position: relative;
+background: #fff;
+min-width: 1220px;
+font-size: 16px;
+font-family: 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei";
+color: #898989;
+
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+}
+
+.container{
+width: 1220px;
+margin: auto;
+position: relative;
+padding: 0 20px;
+}
+
+
+#bottomInfo{
+border-top: 1px #a38658 solid;
+color: #a38658;
+padding: 30px 20px;
+text-align: center;
+font-size: 18px;
+}
+
+#bottomInfo .title{
+font-size: 32px;
+font-weight: bold;
+}
+
+
+#footerWrap{
+background: #313233;
+padding: 90px 0;
+color:#fff;
+}
+
+#footerWrap .qrCode{
+border-right: 1px #fff solid;
+padding: 0 100px;
+text-align: center;
+width: 170px;
+float: right;
+}
+
+#footerWrap .date{
+padding: 0 0 0 70px;
+text-align: center;
+float: left;
+}
+
+
+
+
+
+
+
+@media (max-width: 641px) {
+
+
+
+#bottomInfo .title{
+font-size: 28px;
+}
+
+
+
+
+#footerWrap{
+padding: 30px 0;
+font-size: 12px;
+}
+
+#footerWrap .qrCode{
+padding: 0 20px 0 0;
+width: auto;
+}
+#footerWrap .qrCode img{
+max-width: 100px;
+}
+
+#footerWrap .date{
+padding: 0 0 0 20px;
+}
+#footerWrap .date img{
+max-width: 140px;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

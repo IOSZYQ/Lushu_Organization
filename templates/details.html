@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>定制游企业联盟</title>
+  <link rel="Shortcut Icon" href="/static/images/favorite.ico" type="image/x-icon" />
+  <link rel="Bookmark" href="/static/images/favorite.ico" type="image/x-icon" />
+  <link rel="icon" href="/static/images/favorite.ico" type="image/x-icon" />
+  <link href="/static/css/layout.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/font.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/nav.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/content.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/responsive.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div id="navBarWrap">
+    <div class="container">
+      <div class="navBar">
+        <a href="index.html" class="logo"><img src="/static/images/logo.png"/></a>
+        <div class="nav">
+          <a href="{% url "index" %}">首 页</a>
+          <a href="{% url "calendarInfo.list" %}" class="active">定制游机构名录</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container">
+
+    <div class="page">
+      <div class="breadcrumb"><a href="list.html">定制游机构名录</a> > {{ organization.name }} </div>
+      <h1>{{ organization.name }}</h1>
+
+      <div class="orgLogoRow row">
+        {% if organization.logo  %}
+            <div class="col50">
+          <div class="logo"><img src="/static/images/organization_logo/{{ organization.logo }}.jpg"/> </div>
+        </div>
+        {% endif %}
+        {% if organization.wechat  %}
+            <div class="col50">
+          <div class="qrCode"><img src="/static/images/organization_wechat/{{ organization.wechat }}.jpg"/> </div>
+        </div>
+        {% endif %}
+
+      </div>
+
+      <div class="divider"></div>
+
+      <h2>机构基本信息</h2>
+
+      <div class="basicInfo row">
+        <div class="col50 left">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="header">服务客户类型： </td>
+            <td>{{ organization.customer }}</td>
+          </tr>
+          <tr>
+            <td class="header">产品/服务类型： </td>
+            <td>{{ organization.product }}</td>
+          </tr>
+          <tr>
+            <td class="header">擅长主题定制： </td>
+            <td>{{ organization.detail }}</td>
+          </tr>
+          <tr>
+            <td class="header">定制收费方式： </td>
+            <td>{{ organization.charge }}</td>
+          </tr>
+          <tr>
+            <td class="header">擅长目的地： </td>
+            <td>{{ organization.destionation }}</td>
+          </tr>
+          <tr>
+            <td class="header">全职定制师人数：</td>
+            <td>{{ organization.count }}</td>
+          </tr>
+
+        </table>
+        </div>
+
+        <div class="col50 right">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+            <td class="header">机构网址：</td>
+            <td>{{ organization.website }}</td>
+            </tr>
+            <tr>
+            <td class="header">机构地点：</td>
+            <td>{{ organization.address }}</td>
+            </tr>
+
+
+          </table>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <h2>机构简介</h2>
+      <p>
+        {{ organization.brief }}
+
+      </p>
+
+    </div>
+  </div>
+
+
+
+  <div id="footerWrap">
+    <div class="container">
+
+      <div class="col50">
+        <div class="qrCode">
+          <img src="/static/images/qrCode.png"/>
+          <p>扫一扫 申请加入名录</p>
+        </div>
+
+      </div>
+      <div class="col50">
+        <div class="date"><img src="/static/images/date.png"/> </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#topBanner{
+height: 490px;
+background: #171c2f url("../images/topBanner.jpg") center center no-repeat;
+background-size: cover;
+color: #fff;
+}
+#topBanner .container{
+height: 100%;
+}
+
+#topBanner .content{
+padding-top: 80px;
+max-width: 600px;
+}
+
+#topBanner .slogen{
+font-size: 86px;
+line-height: 100px;
+color: #a38658;
+font-weight: bold;
+text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+#topBanner .slogen .border{
+width: 170px;
+height: 12px;
+background: #a38658;
+box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+margin: 15px 0 0 10px;
+}
+
+#topBanner .content .txt{
+margin: 30px 0 0 10px;
+font-size: 26px;
+text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+#topBanner .content .txt{
+margin: 30px 0 0 10px;
+font-size: 26px;
+text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+#topBanner .panel{
+width: 560px;
+background: #a38658;
+padding: 0 30px 30px 30px;
+position: absolute;
+right: 0;
+bottom: -70px;
+line-height: 140%;
+
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#topBanner .panel:before{
+content:"";
+width: 100%;
+height: 34px;
+background: url("../images/corner.png") right top no-repeat;
+display: block;
+position: absolute;
+top: -34px;
+right: 0;
+
+}
+
+#topBanner .panel h3{
+margin: 0 0 5px 0;
+}
+
+#topBanner .panel p{
+margin: 0 0 5px 0;
+}
+
+#topBanner .panel .border{
+width: 70px;
+height: 10px;
+background: #fff;
+margin-top: 20px;
+}
+
+.container .page{
+padding: 110px 0;
+}
+
+.sectionTitle{
+padding: 40px 0;
+}
+
+.sectionTitle span{
+background: #a38658;
+color: #fff;
+font-size: 24px;
+padding: 0px 40px;
+line-height: 50px;
+display: inline-block;
+}
+.logoWrap{
+text-align: center;
+}
+.logoWrap a{
+display: inline-block;
+height: 95px;
+}
+
+.logoWrap a img{
+height: 100%;
+}
+
+.container .page{
+padding: 70px 0;
+}
+
+.orgBoxWrap{
+padding: 5px;
+width: 50%;
+float: left;
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.orgBox{
+border: 1px #e5e5e5 solid;
+display: block;
+
+-webkit-transition: box-shadow 0.2s;
+-moz-transition: box-shadow 0.2s;
+-o-transition: box-shadow 0.2s;
+transition: box-shadow 0.2s;
+}
+
+
+.orgBox:hover{
+-webkit-box-shadow: rgba(0,0,0,0.1) 0 0 14px;
+-moz-box-shadow: rgba(0,0,0,0.1) 0 0 14px;
+box-shadow: rgba(0,0,0,0.1) 0 0 14px;
+}
+
+.orgBox:hover .header h2{
+color: #a38658;
+-webkit-transition: color 0.2s;
+-moz-transition: color 0.2s;
+-o-transition: color 0.2s;
+transition: color 0.2s;
+}
+
+.orgBox:hover .header:after{
+color: #a38658;
+}
+
+.orgBox .header{
+background: #e5e5e5;
+padding: 0px 10px;
+/*height: 44px;*/
+/*line-height: 44px;*/
+position: relative;
+}
+
+
+.orgBox .header h2{
+    line-height: 26px;
+    padding: 9px 30px 9px 0;
+}
+
+.orgBox .header:after{
+content: "\e903";
+font-family: 'icomoon';
+font-size: 20px;
+position: absolute;
+display: block;
+width: 44px;
+height: 44px;
+line-height: 44px;
+text-align: center;
+right: 0;
+top: 0;
+color: #a9a9a9;
+}
+
+.orgBox .content{
+padding: 20px 10px;
+}
+
+.pageNumber{
+text-align: center;
+color: #000;
+vertical-align: middle;
+margin-top: 30px;
+}
+
+.pageNumber *{
+vertical-align: middle;
+}
+
+.pageNumber span{
+display: inline-block;
+height: 36px;
+width: 45px;
+cursor: pointer;
+text-align: center;
+line-height: 36px;
+margin: 0 4px;
+}
+
+.btnJump{
+background: #eee;
+font-size: 20px;
+
+-webkit-transition: background 0.2s;
+-moz-transition: background 0.2s;
+-o-transition: background 0.2s;
+transition: background 0.2s;
+}
+
+.btnJump:hover{
+background: #000;
+color: #fff;
+}
+
+.btnJump i{
+line-height: 36px;
+}
+
+.btnGo{
+background: #000;
+color: #fff;
+}
+
+.pageNumber input{
+width: 50px;
+height: 36px;
+line-height: 36px;
+padding: 0 5px;
+border: 1px #979797 solid;
+font-size: 16px;
+margin: 0 4px;
+font-family: 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei";
+}
+
+
+.breadcrumb{
+margin-top: -40px;
+cursor: default;
+}
+
+.breadcrumb a:hover{
+color: #a38658;
+}
+
+.orgLogoRow{
+padding-top: 50px;
+}
+
+.orgLogoRow .logo{
+float: right;
+padding: 0 70px;
+vertical-align: middle;
+min-height: 160px;
+line-height: 160px;
+border-right: 1px #eee solid;
+}
+
+.orgLogoRow .logo:before{
+content: "";
+line-height: 160px;
+vertical-align: middle;
+height: 160px;
+display: inline-block;
+}
+
+.orgLogoRow .qrCode{
+float: left;
+padding: 0 70px;
+}
+
+.basicInfo{
+padding-top: 20px;
+}
+
+.basicInfo .left{
+padding-right: 90px;
+}
+
+.basicInfo .right{
+padding-left: 90px;
+}
+
+.basicInfo table .header{
+font-weight: bold;
+min-width: 140px;
+vertical-align: top;
+color: #000;
+}
+
+.basicInfo table td{
+padding: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
