@@ -59,7 +59,8 @@ def organizationDetail(request, userId):
 def dataSourece():
     global  dataFromFile
     if len(dataFromFile) == 0:
-        data = r'/Users/zhouyongqing/Calendar/static/data.csv'
+        data =  BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+        data = os.path.join(data, 'static', 'data.csv')
         with open(data, 'rt') as f:
             source = list(csv.reader(f))
             for organization in source:
