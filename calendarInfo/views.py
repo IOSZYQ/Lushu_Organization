@@ -7,6 +7,7 @@ from django.template.context_processors import csrf
 import xlrd, xlwt, time
 import csv
 import math
+import os
 
 dataFromFile = []
 
@@ -16,7 +17,7 @@ def index(request):
     })
 
 def organizationList(request):
-    reader = dataSourece()
+    reader = dataSource()
     count = 6
     page = math.ceil(len(reader) * 1.0 / count)
     try:
@@ -56,12 +57,12 @@ def organizationDetail(request, userId):
         "organization": organization
     })
 
-def dataSourece():
+def dataSource():
     global  dataFromFile
     if len(dataFromFile) == 0:
         data =  BASE_DIR = os.path.dirname(os.path.dirname(__file__))
         data = os.path.join(data, 'static', 'data.csv')
-        with open(data, 'rt') as f:
+        with open(data, 'rt', newline='', encoding='utf-8') as f:
             source = list(csv.reader(f))
             for organization in source:
                 sourceDic = {}
@@ -85,7 +86,7 @@ def dataSourece():
     return dataFromFile
 
 def dataWithId(Id):
-    datas = dataSourece()
+    datas = dataSource()
     for data in datas:
         if data['id'] == Id:
             return data
