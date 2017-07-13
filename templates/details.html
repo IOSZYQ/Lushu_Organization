@@ -34,7 +34,7 @@
   <div class="container">
 
     <div class="page">
-      <div class="breadcrumb"><a href="list.html">定制游机构名录</a> > {{ organization.name }} </div>
+      <div class="breadcrumb"><a href="{% url "calendarInfo.list" %}">定制游机构名录</a> > {{ organization.name }} </div>
       <h1>{{ organization.name }}</h1>
 
       <div class="orgLogoRow row">
