@@ -94,6 +94,6 @@ def dataWithId(Id):
 def secureRender(request, template, dic, userContext=True):
     dic.update(csrf(request))
     if userContext:
-        return render_to_response(template, dic, context_instance=RequestContext(request))
+        return render_to_response(template, dic, RequestContext(request))
     else:
         return render_to_response(template, dic)
